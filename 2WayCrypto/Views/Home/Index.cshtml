@@ -1,0 +1,75 @@
+﻿@model   CryptoObj
+
+@{
+    ViewBag.Title = "2 Way Crypto";
+}
+
+@using (Html.BeginForm()) {
+<div class="col-sm-6 col-sm-offset-3">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Enter Details for Crypto Object</h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-horizontal">
+                <div class="form-group ">
+                    <label for="UserName" class="col-sm-4">UserName</label>
+                        @Html.TextBoxFor(m => m.UserName, new  { @class = "form-control", @placeholder = "User Name" }  )
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <div class="form-group form-group-sm">
+                    <label for="CompanyGuid" class="col-sm-4">Company Guid</label>
+                        @Html.TextBoxFor(m => m.CompanyGuid, new { @class = "form-control", @placeholder = "Company Guid" })
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <div class="form-group form-group-sm">
+                    <label for="UserGuid" class="col-sm-4">User Guid</label>
+                    @Html.TextBoxFor(m => m.UserGuid, new { @class = "form-control", @placeholder = "User Guid" })
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <div class="form-group form-group-sm">
+                    <label for="AccessKey" class="col-sm-4">Token / AccessKey</label>
+                    @Html.TextBoxFor(m => m.AccessKey, new {  @class = "form-control", @placeholder = "AccessKey / Token" })
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <div class="form-group form-group-sm">
+                    <label for="Created" class="col-sm-4">Created</label>
+                    @Html.TextBoxFor(m => m.Created, new {  @class = "form-control", @placeholder = "Created DateTime" })
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <div class="form-group form-group-sm">
+                    <label for="Password" class="col-sm-4">Password</label>
+                    @Html.TextBoxFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
+                    
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <div class="form-group form-group-sm">
+                    <label for="Licence" class="col-sm-4">Licence</label>
+                    @Html.TextBoxFor(m => m.Licence, new {@class = "form-control", @placeholder = "Licence" })
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <div class="form-group form-group-sm">
+                    <label for="OriginatingURL" class="col-sm-4">URL</label>
+                    @Html.TextBoxFor(m => m.OriginatingURL, new {  @class = "form-control", @placeholder = "ReturnURL" })
+                </div>
+            </div>
+
+            <div class="form-horizontal">
+                <div class="col-sm-12 ">
+                    <Button type="submit" class="btn-group-sm btn btn-block btn-primary" id="Button" value="Submit">Submit</Button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+}

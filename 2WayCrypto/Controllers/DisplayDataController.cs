@@ -15,10 +15,26 @@ namespace _2WayCrypto.Controllers
             var qstringObj = Crypto.Decrypt_URLSafe(value, ConfigurationManager.AppSettings["cryptoKey"]);
 
             var javaScriptSerializer = new System.Web.Script.Serialization.JavaScriptSerializer();
-            var jsonOIN = javaScriptSerializer.Deserialize<CryptoObj>(qstringObj);
+            var nCryptoObj = javaScriptSerializer.Deserialize<CryptoObj>(qstringObj);
 
 
-            return View();
+            return View(nCryptoObj);
         }
+
+        [HttpPost]
+        public ActionResult Index(CryptoObj doNothing)
+        {
+            return RedirectToAction("Index", "Home");
+        }
+
+        //public ActionResult Index()
+        //{
+        //    CryptoObj model = new CryptoObj()
+        //    {
+        //        UserName = "Empty"
+        //    };
+
+        //    return View(model);
+        //}
     }
 }

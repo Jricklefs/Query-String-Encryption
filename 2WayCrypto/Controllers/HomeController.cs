@@ -28,7 +28,7 @@ namespace _2WayCrypto.Controllers
 
                             
 
-            return  Redirect("DisplayData/Index?value=" + EncryptedStuff);
+            return  Redirect("/DisplayData/Index?value=" + EncryptedStuff);
         }
 
     }
